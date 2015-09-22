@@ -404,8 +404,8 @@ esac
 case "${OSTYPE}" in
 # MacOSX
 darwin*)
-    export PATH=$PATH:/opt/local/bin:/opt/local/sbin/
-    export PATH=$PATH:/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/
+    export PATH=$PATH:/opt/local/bin:/opt/local/sbin
+    export PATH=$PATH:/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources
     ;;
 freebsd*)
     case ${UID} in
@@ -681,3 +681,5 @@ esac
 ## local固有設定
 #
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+export PATH=$(brew --prefix)/bin:$PATH
